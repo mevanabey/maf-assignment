@@ -21,20 +21,15 @@ export default class extends Component {
 const Container = styled.div`
     align-items: center;
     align-content: center;
-    background: #f7f7f7;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    
 `;
 
 const Main = styled.main`
     flex-grow: 1;
+    margin: 0 auto;
+    min-height: 100vh;
     width: 100%;
-    max-width: 1300px;
-    padding: 50px 5px 30px 5px;
-
-    p {
-        text-align: justify;
-        margin: 0 0 25px 0;
-    }
+    max-width: 800px;
 `;
