@@ -21,7 +21,6 @@ const Container = styled.button`
     font-size: 20px;
     font-weight: 600;
     letter-spacing: .03em;
-    margin: 0 5px;
     width: 100%;
     outline: 0;
     border-radius: 3px;
