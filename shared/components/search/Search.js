@@ -56,7 +56,7 @@ const Input = styled.input`
     }
 
     &::placeholder {
-        color: ${ colors.font.lightgrey };
+        color: ${ colors.font.darkgrey };
     }
     
     ${ props => props.active && css`

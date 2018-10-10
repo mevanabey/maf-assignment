@@ -37,7 +37,7 @@ class TextInput extends Component {
 }
 
 const Container = styled.div`
-    margin: 25px 0 0 0;
+    margin: 30px 0 0 0;
     position: relative;
 `;
 

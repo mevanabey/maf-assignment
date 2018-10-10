@@ -24,6 +24,7 @@ const Container = styled.button`
     width: 100%;
     outline: 0;
     border-radius: 3px;
+    margin: 20px 0 0 0;
     text-align: center;
     text-transform: uppercase;
     transition: background 0.3s ease, border 0.3s ease;
