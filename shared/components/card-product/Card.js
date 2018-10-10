@@ -8,7 +8,7 @@ const ProductCard = ({ title, price, img, ...props }) => {
         <Container { ...props }>
             <ImageWrapper>
                 { !img && (
-                    <img src="/static/product-default.jpg" alt={ title } title />
+                    <img src="/static/product-default.jpg" alt={ title } title={ title } />
                 ) }
             </ImageWrapper>
             <Title>{ title }</Title>
@@ -24,9 +24,11 @@ const Container = styled.div`
 const ImageWrapper = styled.div`
     border: 3px solid ${ colors.lightgrey };
     border-radius: 3px;
+    cursor: pointer;
     width: 212px;
     height: 212px;
     text-align: center;
+    overflow: hidden;
 
     position: relative;
 
@@ -36,6 +38,13 @@ const ImageWrapper = styled.div`
         top: 50%;
         transform: translateY(-50%);
         margin: 0 auto;
+        transition: all .1s ease-in-out;
+    }
+
+    &:hover {
+        img {
+            transform: translateY(-50%) scale(1.08);
+        }
     }
 `;
 
