@@ -49,7 +49,6 @@ const Error = styled.div`
     line-height: 20px;
     height: 20px;
     padding: 0 15px;
-
     transition: all .1s ease-in-out;
 
     position: absolute;
