@@ -27,12 +27,14 @@ const Container = styled.button`
     text-align: center;
     text-transform: uppercase;
     transition: background 0.3s ease, border 0.3s ease;
-    padding: 15px;
+    padding: 0 15px;
 
     position: relative;
     
     ${ props => props.primary && css`
         background: ${ colors.blue };
+        line-height: 50px;
+        height: 50px;
     `}
 `;
 
