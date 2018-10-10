@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
 
 import Button from 'shared/components/button/Button';
@@ -7,25 +7,35 @@ import Checkbox from 'shared/components/input-checkbox/Checkbox';
 
 import colors from 'shared/styles/colors';
 
-const Login = () => {
-    return (
-        <LoginForm>
-            <Title>
-                Sign In Now
-                <span>Unlock awesome features!</span>
-            </Title>
-            <TextInput type="text" placeholder="Username" error="Required field" />
-            <TextInput type="password" placeholder="Password" />
-            <DoubleWrap>
-                <Checkbox label="Keep me logged in" />
-                <ForgotPassword>
-                    Forgot password?
-                </ForgotPassword>
-            </DoubleWrap>
-            <Button primary>Sign In</Button>
-        </LoginForm>
-    );
-};
+class Login extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+
+        }
+    }
+
+    render() {
+        return (
+            <LoginForm>
+                <Title>
+                    Sign In Now
+                    <span>Unlock awesome features!</span>
+                </Title>
+                <TextInput type="text" placeholder="Username" error="Required field" />
+                <TextInput type="password" placeholder="Password" />
+                <DoubleWrap>
+                    <Checkbox label="Keep me logged in" />
+                    <ForgotPassword>
+                        Forgot password?
+                    </ForgotPassword>
+                </DoubleWrap>
+                <Button primary>Sign In</Button>
+            </LoginForm>
+        );
+    }
+}
 
 export default Login;
 
