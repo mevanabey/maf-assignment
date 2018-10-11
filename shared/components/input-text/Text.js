@@ -11,6 +11,10 @@ class TextInput extends Component {
             active: false,
         }
     }
+
+    handleChange(e){
+        this.props.handle(this.props.name, e.target.value);
+    }
     
     handleActive(e){
         if(!e.target.value) {
@@ -22,7 +26,7 @@ class TextInput extends Component {
 
     render(){
         const { active } = this.state;
-        const { error, placeholder } = this.props;
+        const { error, placeholder, handle } = this.props;
 
         return (
             <Container>
@@ -30,14 +34,14 @@ class TextInput extends Component {
                 { error && (
                     <Error>{ error }</Error>
                 )}
-                <Input { ...this.props } onBlur={ (e) => this.handleActive(e) } onFocus={ (e) => this.handleActive(e) } />
+                <Input { ...this.props } onChange={ (e) => { this.handleChange(e) } } onBlur={ (e) => this.handleActive(e) } onFocus={ (e) => this.handleActive(e) } />
             </Container>
         );
     };
 }
 
 const Container = styled.div`
-    margin: 25px 0 0 0;
+    margin: 27px 0 0 0;
     position: relative;
 `;
 

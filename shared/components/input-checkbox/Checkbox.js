@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
 
+import CheckIcon from 'shared/icons/icon-check.svg';
 import colors from 'shared/styles/colors';
 
 
@@ -32,7 +33,9 @@ class Checkbox extends Component {
                         disabled={ disabled }
                         onChange={ (e) => this.handleChange(e) }
                     />
-                    <CheckboxSpan checked={ checked } />
+                    <CheckboxSpan checked={ checked }>
+                        <CheckIcon />
+                    </CheckboxSpan>
                     <LabelText>{ label }</LabelText>
                 </CheckboxLabel>
             </Container>
@@ -78,7 +81,19 @@ const CheckboxSpan = styled.span`
     box-sizing: border-box;
     transition: all 0.2s;
 
+    svg {
+        display: none;
+
+        path {
+            fill: ${ colors.white };
+        }
+    }
+
     ${ props => props.checked && css`
         background: ${ colors.blue };
+
+        svg {
+            display: block;
+        }
     `}
 `;

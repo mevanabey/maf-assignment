@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
 
+import SearchIcon from 'shared/icons/icon-search.svg';
 import colors from 'shared/styles/colors';
 
 class Search extends Component {
@@ -24,8 +25,10 @@ class Search extends Component {
         const { active } = this.state;
 
         return (
-            //TODO: Add Icon
-            <Container>
+            <Container active={ active }>
+                <IconWrap>
+                    <SearchIcon />
+                </IconWrap>
                 <Input active={ active } placeholder="Search..." onBlur={ (e) => this.handleActive(e) } onFocus={ (e) => this.handleActive(e) } />
             </Container>
         );
@@ -33,37 +36,54 @@ class Search extends Component {
 }
 
 const Container = styled.div`
+    background: ${ colors.lightblue };
+    border-radius: 3px;
+    position: relative;
+    width: 50px;
+    transition: all .2s ease-in-out;
+
+    ${ props => props.active && css`
+        padding: 0 50px 0 0;
+        width: 200px;
+        max-width: 100%;
+    `}
 `;
 
 const Input = styled.input`
     appearance: none;
-    background: ${ colors.lightblue };
-    border: 1px solid #f6f6f6;
-    border-radius: 3px;
-    box-shadow: 1px 1px 3px 0px rgb(245, 245, 245) inset;
+    background: none;
+    border: 0;
     color: ${ colors.font.black };                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          };
     font-size: 14px;
     line-height: 40px;
-    padding: 0 50px 0 0;
+    padding: 0 50px 0 20px;
     height: 40px;
-    width: 0;
-    transition: all .2s ease-in-out;
+    width: 100%;
 
     position: relative;
+    z-index: 10;
 
     &:active, &:focus {
         outline: 0;
     }
 
     &::placeholder {
-        color: ${ colors.font.lightgrey };
+        color: ${ colors.font.darkgrey };
     }
-    
-    ${ props => props.active && css`
-        padding: 0 50px 0 20px;
-        width: 200px;
-        max-width: 100%;
-    `}
+`;
+
+const IconWrap = styled.div`
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    right: 17px;
+    z-index: 9;
+
+    svg {
+        path{
+            fill: ${ colors.blue };
+        }  
+    }
 `;
 
 export default Search;
