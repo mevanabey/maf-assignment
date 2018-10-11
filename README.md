@@ -1,6 +1,8 @@
 # maf-assignment
 Technical test for Majid Al Futtaim
 
+Demo - [https://maf-assignment-nenfqkgece.now.sh/](https://maf-assignment-nenfqkgece.now.sh)
+
 ## Technologies Used
 - React
 - Next.js
