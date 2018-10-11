@@ -11,6 +11,7 @@
   "author": "“Mevan <mevanabeydeera@gmail.com> (http://mevanabeydeera.com)",
   "license": "MIT",
   "dependencies": {
+    "babel-plugin-inline-react-svg": "^1.0.0",
     "babel-plugin-module-resolver": "^3.1.1",
     "babel-plugin-styled-components": "^1.8.0",
     "express": "^4.16.3",

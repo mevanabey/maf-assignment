@@ -19,6 +19,10 @@ const ProductCard = ({ title, price, img, ...props }) => {
 
 const Container = styled.div`
     position: relative;
+
+    @media screen and (max-width: 560px) {
+        margin: 0 0 30px 0;
+    }
 `;
 
 const ImageWrapper = styled.div`
@@ -46,6 +50,10 @@ const ImageWrapper = styled.div`
             transform: translateY(-50%) scale(1.08);
         }
     }
+
+    @media screen and (max-width: 560px) {
+        margin: 0 auto 0 auto;
+    }
 `;
 
 const Title = styled.span`
@@ -53,6 +61,11 @@ const Title = styled.span`
     display: block;
     font-size: 14px;
     margin: 20px 0 0 0;
+
+    @media screen and (max-width: 560px) {
+        margin: 10px 0 0 0;
+        text-align: center;
+    }
 `;
 
 const Price = styled.span`
@@ -60,6 +73,10 @@ const Price = styled.span`
     display: block;
     font-size: 18px;
     font-weight: 600;
+
+    @media screen and (max-width: 560px) {
+        text-align: center;
+    }
 `;
 
 export default ProductCard;
