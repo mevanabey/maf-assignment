@@ -1,7 +1,8 @@
 # maf-assignment
 Technical test for Majid Al Futtaim
 
-Demo - [https://maf-assignment-nenfqkgece.now.sh/](https://maf-assignment-nenfqkgece.now.sh)
+***Demo container will be frozen on server when inactive. Please allow some time for container to unfreeze and start services***
+Demo - [https://maf-assignment-nenfqkgece.now.sh/](https://maf-assignment-nenfqkgece.now.sh) 
 
 ## Technologies Used
 - React
